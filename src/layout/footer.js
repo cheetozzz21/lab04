@@ -1,55 +1,72 @@
 import "../style.css"
 const Footer = () => {
+    const cardStyle = {
+        backgroundColor: '#ffffff',
+        borderRadius: '8px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        padding: '20px',
+        margin: '25px',
+        textAlign: 'left',
+        width: '200px'
+    };
+
     return (
-        <footer style={{ backgroundColor: '#f0f0f0', padding: '20px', textAlign: 'center' }}>
-            <div style={{ marginBottom: '10px', textAlign: 'left' }}>
-                <button style={{ background: 'none', border: 'none', color: 'blue', fontWeight: 'bold', display: 'block' }}>Inicio</button>
-                <button style={{ background: 'none', border: 'none', color: 'blue', fontWeight: 'bold', display: 'block' }}>Buscar Tienda</button>
-                <button style={{ background: 'none', border: 'none', color: 'blue', fontWeight: 'bold', display: 'block' }}>Regístrate</button>
+        <footer style={{ backgroundColor: '#f8f9fa', padding: '40px 20px', textAlign: 'center', fontFamily: 'Arial, sans-serif' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '30px' }}>
+                <button style={{ background: 'none', border: 'none', color: '#007bff', fontWeight: 'bold', cursor: 'pointer' }}>Inicio</button>
+                <button style={{ background: 'none', border: 'none', color: '#007bff', fontWeight: 'bold', cursor: 'pointer' }}>Buscar Tienda</button>
+                <button style={{ background: 'none', border: 'none', color: '#007bff', fontWeight: 'bold', cursor: 'pointer' }}>Regístrate</button>
             </div>
-            <div style={{ marginBottom: '20px' }}>
-                <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                    <li style={{ display: 'inline-block', marginRight: '20px', verticalAlign: 'top' }}>
-                        <h3>ABARROTES</h3>
-                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                            <li>Arroz</li>
-                            <li>Papa</li>
-                            <li>Yuca</li>
-                        </ul>
-                    </li>
-                    <li style={{ display: 'inline-block', marginRight: '20px', verticalAlign: 'top' }}>
-                        <h3>CARNES</h3>
-                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                            <li>Pollo</li>
-                            <li>Pescado</li>
-                            <li>Chancho</li>
-                        </ul>
-                    </li>
-                    <li style={{ display: 'inline-block', marginRight: '20px', verticalAlign: 'top' }}>
-                        <h3>USO PERSONAL</h3>
-                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                            <li>Toalla</li>
-                            <li>Jabon</li>
-                            <li>Shampoo</li>
-                        </ul>
-                    </li>
-                    <li style={{ display: 'inline-block', verticalAlign: 'top' }}>
-                        <h3>BEBIDAS</h3>
-                        <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
-                            <li>Agua</li>
-                            <li>Jugo</li>
-                            <li>Alcoholicas</li>
-                        </ul>
-                    </li>
-                </ul>
+
+            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '40px' }}>
+                <div style={cardStyle}>
+                    <h3 style={{ color: '#343a40' }}>ABARROTES</h3>
+                    <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                        <li style={{ marginBottom: '5px' }}>Arroz</li>
+                        <li style={{ marginBottom: '5px' }}>Papa</li>
+                        <li style={{ marginBottom: '5px' }}>Yuca</li>
+                    </ul>
+                </div>
+                <div style={cardStyle}>
+                    <h3 style={{ color: '#343a40' }}>CARNES</h3>
+                    <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                        <li style={{ marginBottom: '5px' }}>Pollo</li>
+                        <li style={{ marginBottom: '5px' }}>Pescado</li>
+                        <li style={{ marginBottom: '5px' }}>Chancho</li>
+                    </ul>
+                </div>
+                <div style={cardStyle}>
+                    <h3 style={{ color: '#343a40' }}>USO PERSONAL</h3>
+                    <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                        <li style={{ marginBottom: '5px' }}>Toalla</li>
+                        <li style={{ marginBottom: '5px' }}>Jabón</li>
+                        <li style={{ marginBottom: '5px' }}>Shampoo</li>
+                    </ul>
+                </div>
+                <div style={cardStyle}>
+                    <h3 style={{ color: '#343a40' }}>BEBIDAS</h3>
+                    <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                        <li style={{ marginBottom: '5px' }}>Agua</li>
+                        <li style={{ marginBottom: '5px' }}>Jugo</li>
+                        <li style={{ marginBottom: '5px' }}>Alcohólicas</li>
+                    </ul>
+                </div>
             </div>
             <div>
-                <button style={{ background: 'none', border: 'none' }}><img src=""></img></button>
-                <button style={{ background: 'none', border: 'none' }}><img src=""></img></button>
-                <button style={{ background: 'none', border: 'none' }}><img src=""></img></button>
+                <button style={{ background: 'none', border: 'none', margin: '0 10px', cursor: 'pointer' }}>
+                    <img src="path_to_image1" alt="Social Media 1" style={{ width: '24px', height: '24px' }} />
+                </button>
+                <button style={{ background: 'none', border: 'none', margin: '0 10px', cursor: 'pointer' }}>
+                    <img src="path_to_image2" alt="Social Media 2" style={{ width: '24px', height: '24px' }} />
+                </button>
+                <button style={{ background: 'none', border: 'none', margin: '0 10px', cursor: 'pointer' }}>
+                    <img src="path_to_image3" alt="Social Media 3" style={{ width: '24px', height: '24px' }} />
+                </button>
             </div>
         </footer>
     );
 }
 
 export default Footer;
+
+
