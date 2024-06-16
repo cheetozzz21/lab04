@@ -3,21 +3,18 @@ import { Outlet } from "react-router-dom";
 import Header from "./header";
 import Footer from "./footer";
 
-const Basic = () => {
+const Basic1 = () => {
     return (
         <>
             <StrictMode>
-                <Header />
                 <div className="basic-container">
                 <div className="row">
                         <Outlet />
                     </div>
                 </div>
-                <Footer />
             </StrictMode>
         </>
     );
 }
 
-
-export default Basic;
+export default Basic1;

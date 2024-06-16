@@ -2,21 +2,21 @@
     
     {
         "name": "Six Pack Pilsen Callao",
-        "slug": "17.9",
+        "slug": "pilsen",
         "description": "---",
-        "picture": "https://plazavea.vteximg.com.br/arquivos/ids/19675635-1000-1000/20055168.jpg"
+        "picture": "https://i.imgur.com/sbs4CD7.png"
     },
     {
-        "name": "Agua de 1Litro!",
-        "slug": "3.5",
+        "name": "Agua de 1Litro",
+        "slug": "sanluis",
         "description": "---",
-        "picture": "https://plazavea.vteximg.com.br/arquivos/ids/730808-1000-1000/918448.jpg"
+        "picture": "https://i.imgur.com/q8SclGr.png"
     },
     {
         "name": "Vino Borgoña ",
-        "slug": "15.5",
+        "slug": "vino",
         "description": "---",
-        "picture": "https://plazavea.vteximg.com.br/arquivos/ids/533729-1000-1000/1133012001.jpg"
+        "picture": "https://i.imgur.com/otqXnuK.png"
     }
     
 ]

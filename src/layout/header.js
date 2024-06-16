@@ -1,38 +1,71 @@
 import "../stylehead.css"
 import { Link } from "react-router-dom";
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Header = () => {
+
+
+function Header() {
+       
+    
     return (
-        <header style={{ backgroundColor: '#97CADB', padding: '5px 20px', fontFamily: 'Arial, sans-serif', color: 'white' }}>
+        <header classname="header-barra" style={{ backgroundColor: '#4CAF50'}}>
             <div className="container-fluid">
                 <div className="row align-items-center">
+
+
                     <div className="col-md-1 d-flex justify-content-center">
-                        <div style={{ backgroundColor: '#02457A', padding: '5px', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <img src="https://i.imgur.com/dFku6Qa.png" alt="Logo" className="img-fluid" style={{ borderRadius: '50%' }} />
+                        <div style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <Navbar.Brand href="/"><img src="https://i.imgur.com/ECx8W7C.png" alt="Logo" className="logo" /></Navbar.Brand>
+                            <Navbar.Brand href="/"><div className='textjyj'>J & J</div></Navbar.Brand>
                         </div>
                     </div>
-                    <div className="col-md-5">
-                        <input 
-                            type="text" 
-                            className="form-control" 
-                            placeholder="¿Qué estás buscando?" 
-                            style={{ borderRadius: '15px', padding: '5px 10px', width: '100%' }} 
-                        />
-                    </div>
+                    
                     <div className="col-md-2 text-center">
                         <Link to="/productos">
-                            <button className="btn" style={{ backgroundColor: 'transparent', color: 'white', padding: '5px 10px', fontSize: '14px', fontWeight: 'bold' }}>Productos</button>
+                            <button className="botonbarra stylebutton " >Productos</button>
                         </Link>
                     </div>
                     <div className="col-md-2 text-center">
                         <Link to="/descuentos">
-                            <button className="btn" style={{ backgroundColor: 'transparent', color: 'white', padding: '5px 10px', fontSize: '14px', fontWeight: 'bold' }}>Descuentos</button>
+                            <button className="botonbarra stylebutton" >Descuentos</button>
                         </Link>
                     </div>
-                    <div className="col-md-2 text-center">
-                        <Link to="/">
-                            <button className="btn" style={{ backgroundColor: 'transparent', color: 'white', padding: '5px 10px', fontSize: '14px', fontWeight: 'bold' }}>Iniciar sesion</button>
-                        </Link>
+
+
+                    <div className="col-md-5">
+                        <input 
+                            type="text" 
+                            className="search " 
+                            placeholder="Search" 
+                            style={{ borderRadius: '15px', padding: '5px 10px', width: '100%', backgroundColor: '#EDEABF',textAlign: 'left' }} 
+                        />
+                    </div>
+                    
+                    <div className="col-md-1 d-flex justify-content-center">
+                        <div style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <Navbar.Brand href="/"><img src="https://i.imgur.com/cuHZxRw.png" alt="Logo" className="user" style={{ borderRadius: '10%' }} /></Navbar.Brand>
+                        </div>
+                    </div>
+
+                    
+
+                    <div className="col-md-1">
+                            <NavDropdown 
+                                className="d-inline-block " 
+                                alignRight 
+                                title={<img src="https://i.imgur.com/NjVtc52.png" 
+                                        alt="Logo" 
+                                        className="user img-fluid" />} 
+                                id="navbarScrollingDropdown"
+                               
+                            > 
+                                    
+                                    <NavDropdown.Item class="negrita-user" href="/iniciar-Sesion" >Iniciar sesión/Registrarse</NavDropdown.Item>
+                                    <div class="divider"></div>
+                                    <NavDropdown.Item class="negrita-user" href="#action3" >Mis pedidos</NavDropdown.Item>
+                                    <NavDropdown.Item class="negrita-user" href="#action3" >Mis productos</NavDropdown.Item>          
+                            </NavDropdown>                             
                     </div>
                 </div>
             </div>

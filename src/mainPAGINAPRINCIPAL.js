@@ -16,23 +16,23 @@ const Main = () => {
     }
 
     return <main>
-        <Carousel>
-            {productos.map((it, index) => (
-                <Carousel.Item key={index} onClick={(e) => {
-                    e.preventDefault();
-                    handleClick(it.slug);
-                }}>
-                    <div className="d-flex justify-content-center align-items-center">
-                        <img className="w-50 dark-image" src={it.picture} alt={it.name} />
-                    </div>
-                    <Carousel.Caption>
-                        <h3>{it.name}</h3>
-                        <p>{it.description}</p>
-                        <button className="btn btn-primary">Ver detalle</button>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            ))}
-        </Carousel>
+        <Carousel style={{ height: '500px' }}>
+                    {productos.map((it, index) => (
+                        <Carousel.Item key={index} onClick={(e) => {
+                            e.preventDefault();
+                            handleClick(it.slug);
+                        }}>
+                            <div className="d-flex justify-content-center align-items-center">
+                                <img className='carousel' src={it.picture} alt={it.name} />
+                            </div>
+                            <Carousel.Caption>
+                                <h3>{it.name}</h3>
+                                <p>{it.description}</p>
+                                <button className="btn btn-primary">Ver detalle</button>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
 
         <hr />
         <div class="categories-section text-center"></div>

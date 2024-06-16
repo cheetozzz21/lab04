@@ -14,10 +14,7 @@
     color: white!important;
 }
 
-body{
-    margin :0 !important;
-    padding: 0 !important;
-}
+
 
 .centrar{
     margin : auto;
@@ -27,4 +24,89 @@ body{
 .caja{
     max-width:100 px ;
     max-height: 100 px;
+}
+
+.logo{
+    max-width: 90px;
+      max-height: 90px;
+  }
+
+  .user{
+    max-width: 35px;
+      max-height: 35px;
+  }
+
+
+  .divider {
+    height: 1px;
+    margin: .5rem 0;
+    overflow: hidden;
+    background-color: #4b4e50;
+}
+
+
+
+  .d-inline-block .dropdown-toggle::after {
+    display: none !important; /* Oculta la flecha desplegable */
+    border-radius: 50px; 
+}
+
+.negrita-user {
+    transition: font-weight 0.3s ease;
+}
+
+/* Cambiar el peso de la fuente cuando se pasa el mouse por encima */
+.negrita-user:hover {
+    font-weight: bold;
+}
+
+.textjyj {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #f8f8d2;
+}
+
+.botonbarra {
+    border:none;
+    padding: 4px 14px;
+    text-align: center;
+    font-size: 22px;
+    font-family: "Tahoma", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .search {
+    border:none;
+    padding: 4px 14px;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Tahoma", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .stylebutton {
+    background-color: transparent;
+    color: #f8f8d2;
+    padding: 1px 10px;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Cambiar el color del texto al pasar el mouse por encima */
+.stylebutton:hover {
+    color: #ffffff; /* Cambia este color según tu preferencia */
+    font-weight: bold;
+
+}
+
+
+.header-barra {
+    background-color: #4CAF50;
+    padding: 1px 10px;
+    color: white;
 }
