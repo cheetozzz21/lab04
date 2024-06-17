@@ -10,7 +10,7 @@ const Single = () => {
         <hr></hr>
         <img src={pro.picture}></img>
         <p>{pro.description}</p>
-    </>);
+    </>);   
 }
 
 export default Single;

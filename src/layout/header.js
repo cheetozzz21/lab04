@@ -21,25 +21,32 @@ function Header() {
                         </div>
                     </div>
                     
-                    <div className="col-md-2 text-center">
+                    <div className="col-md-1 text-center">
                         <Link to="/productos">
                             <button className="botonbarra stylebutton " >Productos</button>
                         </Link>
                     </div>
-                    <div className="col-md-2 text-center">
+                    <div className="col-md-1 text-center">
                         <Link to="/descuentos">
                             <button className="botonbarra stylebutton" >Descuentos</button>
                         </Link>
                     </div>
 
 
-                    <div className="col-md-5">
+                    <div className="col-md-6 d-flex justify-content-center">
                         <input 
                             type="text" 
                             className="search " 
                             placeholder="Search" 
-                            style={{ borderRadius: '15px', padding: '5px 10px', width: '100%', backgroundColor: '#EDEABF',textAlign: 'left' }} 
+                            style={{ borderRadius: '15px', padding: '5px 10px', width: '80%', backgroundColor: '#EDEABF',textAlign: 'left' }} 
                         />
+                    </div>
+
+
+                    <div className="col-md-1 d-flex justify-content-center">
+                        <div style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <Navbar.Brand href="/"><img src="https://i.imgur.com/tbxdgrD.png" alt="megusta" className="user" style={{ borderRadius: '10%' }} /></Navbar.Brand>
+                        </div>
                     </div>
                     
                     <div className="col-md-1 d-flex justify-content-center">

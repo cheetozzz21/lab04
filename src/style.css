@@ -71,7 +71,7 @@
     border:none;
     padding: 4px 14px;
     text-align: center;
-    font-size: 22px;
+    font-size: 17px;
     font-family: "Tahoma", sans-serif;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -79,19 +79,19 @@
 
   .search {
     border:none;
-    padding: 4px 14px;
+    padding: 4px 10px;
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     font-family: "Tahoma", sans-serif;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    
   }
 
   .stylebutton {
     background-color: transparent;
     color: #f8f8d2;
     padding: 1px 10px;
-    font-size: 19px;
     border: none;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -104,9 +104,26 @@
 
 }
 
+.botoncateg {
+    background-color: transparent;
+    color: #8d8d86;
+    padding: 1px 10px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Cambiar el color del texto al pasar el mouse por encima */
+.botoncateg:hover {
+    color: #000000; /* Cambia este color según tu preferencia */
+    font-weight: bold;
+
+}
+
 
 .header-barra {
     background-color: #4CAF50;
     padding: 1px 10px;
     color: white;
+    
 }

@@ -1,8 +1,15 @@
+import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import './stylemain.css';
 import { useNavigate } from 'react-router-dom';
-const feather = require('feather-icons');
-import productos from './data/productosPaginaPrincipal.json'
+import feather from 'feather-icons';
+import productos from './data/productosPaginaPrincipal.json';
+import './style.css';
+import './category.css';
+import categorias from './categoriasCarrusel/product.json';
+
+
+
 setTimeout(() => {
     feather.replace();
 }, 500);
@@ -14,38 +21,68 @@ const Main = () => {
     const handleClick = (slug) => {
         navigate("/detalle/" + slug);
     }
+    
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handlePreviousClick = () => {
+        setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : categorias.length - 1));
+    };
+
+    const handleNextClick = () => {
+        setCurrentIndex((prevIndex) => (prevIndex < categorias.length - 1 ? prevIndex + 1 : 0));
+    };
 
     return <main>
         <Carousel style={{ height: '500px' }}>
                     {productos.map((it, index) => (
                         <Carousel.Item key={index} onClick={(e) => {
-                            e.preventDefault();
-                            handleClick(it.slug);
-                        }}>
-                            <div className="d-flex justify-content-center align-items-center">
-                                <img className='carousel' src={it.picture} alt={it.name} />
-                            </div>
-                            <Carousel.Caption>
-                                <h3>{it.name}</h3>
-                                <p>{it.description}</p>
-                                <button className="btn btn-primary">Ver detalle</button>
-                            </Carousel.Caption>
+                                e.preventDefault();
+                                handleClick(it.slug);
+                            }}>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <img className='carousel' src={it.picture} />
+                                </div>
+                                <Carousel.Caption>
+                                    <button className="btn btn-primary">Ver detalle</button>
+                                </Carousel.Caption>
                         </Carousel.Item>
                     ))}
-                </Carousel>
-
-        <hr />
-        <div class="categories-section text-center"></div>
-        <h2 class="text-center">CATEGORÍAS</h2>
-        <div >
-            <img src="" alt="Categoria 1" class="category-button"></img>
-            <img src="" alt="Categoria 2" class="category-button"></img>
-            <img src="" alt="Categoria 3" class="category-button"></img>
-            <img src="" alt="Categoria 4" class="category-button"></img>
-            <img src="" alt="Categoria 5" class="category-button"></img>
-            <img src="" alt="Categoria 5" class="category-button"></img>
-
+        </Carousel>
+        
+        
+        <div className="container-flu">
+            <div className="row align-items-center">
+                <div className="col-md-1 d-flex justify-content-center">
+                    <img
+                        src="https://i.imgur.com/k7i8SUg.png"
+                        alt="Previous"
+                        className="navigation-button"
+                        onClick={handlePreviousClick}
+                    />
+                </div>
+                <div className="col-md-10 d-flex justify-content-center ">
+                    {categorias.slice(currentIndex, currentIndex + 5).map((categoria) => (
+                        <div key={categoria.id} className="category-item">
+                            <img src={categoria.imageUrl} alt={categoria.altText} className="category-button" />
+                            <p className="category-name">{categoria.name}</p>
+                        </div>
+                    ))}
+                </div>
+                <div className="col-md-1 d-flex justify-content-center">
+                    <img
+                        src="https://i.imgur.com/4oMgEcQ.png"
+                        alt="Next"
+                        className="navigation-button"
+                        onClick={handleNextClick}
+                    />
+                </div>
+            </div>
         </div>
+
+
+        
+      
+
 
         <hr />
         <div class="popular-products-section text-center">

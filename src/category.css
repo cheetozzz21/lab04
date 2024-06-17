@@ -1,0 +1,36 @@
+.container-flu {
+    padding: 20px;
+}
+
+.category-button {
+    width: 170px;
+    height: 170px;
+    cursor: pointer;
+    margin: 10px;
+    margin: 10px;
+    border: 12px solid #FFFF00;
+}
+
+.category-name {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    width: 150px; 
+}
+
+.navigation-button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    margin: 0;
+}
+

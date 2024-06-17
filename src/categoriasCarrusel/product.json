@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Lacteos",
+        "slug": "lacteos",
+        "description": "---",
+        "imageUrl": "https://www.webconsultas.com/sites/default/files/styles/wch_image_schema/public/articulos/productos-lacteos.jpg",
+        "altText": "Lacteos"
+    },
+    {
+        "id": 2,
+        "name": "Cereales",
+        "slug": "cereales",
+        "description": "---",
+        "imageUrl": "https://thefoodtech.com/wp-content/uploads/2021/03/cereales-828x540.jpg",
+        "altText": "Cereales"
+    },
+    {
+        "id": 3,
+        "name": "Carnes",
+        "slug": "carnes",
+        "description": "---",
+        "imageUrl": "https://img.freepik.com/foto-gratis/carne-cruda-mesa_23-2150857912.jpg",
+        "altText": "Carnes"
+    },
+    {
+        "id": 4,
+        "name": "Verduras y frutas",
+        "slug": "verfrutas",
+        "description": "---",
+        "imageUrl": "https://cdn.kiwilimon.com/articuloimagen/30131/28243.jpg",
+        "altText": "verdurasyfrutas"
+    },
+    {
+        "id": 5,
+        "name": "Embutidos",
+        "slug": "embutidos",
+        "description": "---",
+        "imageUrl": "https://tecnas.com.co/wp-content/uploads/2021/01/carnicas-sabores.png",
+        "altText": "embutidos"
+    },
+    {
+        "id": 6,
+        "name": "Atún",
+        "slug": "enlatados",
+        "description": "---",
+        "imageUrl": "https://www.latrochadigital.com.ar/wp-content/uploads/2022/05/beneficios-del-atun-1.jpg",
+        "altText": "enlatado"
+    },
+    {
+        "id": 7,
+        "name": "Bebidas alcohólicas",
+        "slug": "alcohol",
+        "description": "---",
+        "imageUrl": "https://i.blogs.es/7fc543/alcohol/1366_2000.jpg",
+        "altText": "alcoholicas"
+    },
+    {
+        "id": 8,
+        "name": "Bebidas energizantes",
+        "slug": "alcohol",
+        "description": "---",
+        "imageUrl": "https://images.ecestaticos.com/bFucS6IeD416pVScZk4nHWAaF3s=/0x0:2272x1425/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fa9f%2F385%2Ffe3%2Fa9f385fe37c6badcc8a0f81629ae1f98.jpg",
+        "altText": "energizante"
+    },
+    {
+        "id": 9,
+        "name": "Snacks",
+        "slug": "snacks",
+        "description": "---",
+        "imageUrl": "https://ecx.images-amazon.com/images/I/61Dt99M29aL.jpg",
+        "altText": "snacks"
+    },
+    {
+        "id": 10,
+        "name": "Dulces",
+        "slug": "dulce",
+        "description": "---",
+        "imageUrl": "https://deliccias.es/wp-content/uploads/2023/11/Lote-Dulces-Mexicanos.jpg",
+        "altText": "Carnes"
+    },
+    {
+        "id": 11,
+        "name": "Productos de limpieza",
+        "slug": "limpieza",
+        "description": "---",
+        "imageUrl": "https://blog.flota.es/wp-content/uploads/2015/12/productos-limpieza-basicos.jpg",
+        "altText": "limpieza"
+    },
+    {
+        "id": 12,
+        "name": "Cuidado personal",
+        "slug": "personal",
+        "description": "---",
+        "imageUrl": "https://ecommerce.surtifamiliar.com/backend/admin/backend/web/archivosDelCliente/categorias/images/20201103104540-Aseo-Personal-Cuidado-Capilar16044183409461.jpg",
+        "altText": "Carnes"
+    }
+]
