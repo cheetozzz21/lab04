@@ -86,30 +86,30 @@ const Main = () => {
 
         <hr />
         <div class="popular-products-section text-center">
-            <h2 class="text-center">PRODUCTOS MÁS VENDIDOS</h2>
+            <h2 class="text-center" ><i data-feather="clipboard"></i> PRODUCTOS MÁS VENDIDOS</h2>
             <div>
                 <div class="product-card">
-                    <img src="" alt="Producto 1" class="product-image">
+                    <img src="https://www.prisa.cl/media/cache/attachment/filter/product_gallery_main/b6b1adc76b36bd6a7f81344215e93277/76961/Prisa-6321140456538918788443.png" alt="Producto 1" class="product-image">
                     </img>
                     <div class="product-name">CLORO</div>
                 </div>
                 <div class="product-card">
-                    <img src="" alt="Producto 2" class="product-image">
+                    <img src="https://wongfood.vtexassets.com/arquivos/ids/230542/Sapolio-Lejia-Original-5000-g-1-144025.jpg?v=636664861447600000" alt="Producto 2" class="product-image">
                     </img>
                     <div class="product-name">LEJIA</div>
                 </div>
                 <div class="product-card">
-                    <img src="" alt="Producto 3" class="product-image">
+                    <img src="https://media.justo.mx/products/7500435140010.jpg" alt="Producto 3" class="product-image">
                     </img>
                     <div class="product-name">DETERGENTE</div>
                 </div>
                 <div class="product-card">
-                    <img src="" alt="Producto 4" class="product-image">
+                    <img src="https://i0.wp.com/lepotmarket.com/wp-content/uploads/2021/03/LP-Gloria-Leche-Reconstituida.png?fit=700%2C700&ssl=1" alt="Producto 4" class="product-image">
                     </img>
                     <div class="product-name">LECHE</div>
                 </div>
                 <div class="product-card">
-                    <img src="" alt="Producto 5" class="product-image">
+                    <img src="https://media.freshmart.pe/products/62237.png" alt="Producto 5" class="product-image">
                     </img>
                     <div class="product-name">SIBARITA</div>
                 </div>
@@ -117,7 +117,7 @@ const Main = () => {
         </div>
 
         <div class="about-us-section text-center">
-            <h2>¿QUIÉNES SOMOS?</h2>
+            <h2>¿QUIÉNES SOMOS? </h2 ><i data-feather="users"></i>
             <div>
                 <div class="about-card">
                     <h3 class="about-title">Historia</h3>

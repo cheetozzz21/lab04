@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
-
 function Header() {
        
     
@@ -68,10 +67,17 @@ function Header() {
                                
                             > 
                                     
-                                    <NavDropdown.Item class="negrita-user" href="/iniciar-Sesion" >Iniciar sesión/Registrarse</NavDropdown.Item>
-                                    <div class="divider"></div>
-                                    <NavDropdown.Item class="negrita-user" href="#action3" >Mis pedidos</NavDropdown.Item>
-                                    <NavDropdown.Item class="negrita-user" href="#action3" >Mis productos</NavDropdown.Item>          
+                                    <NavDropdown.Item className="negrita-user" href="/iniciar-Sesion">
+        <i data-feather="user"></i> Iniciar sesión/Registrarse
+      </NavDropdown.Item>
+      <div className="divider"></div>
+      <NavDropdown.Item className="negrita-user" href="#action3">
+        <i data-feather="shopping-bag"></i> Mis pedidos
+      </NavDropdown.Item>
+      <NavDropdown.Item className="negrita-user" href="#action4">
+        <i data-feather="package"></i> Mis productos
+      </NavDropdown.Item>
+                                              
                             </NavDropdown>                             
                     </div>
                 </div>

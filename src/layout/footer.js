@@ -54,13 +54,13 @@ const Footer = () => {
             </div>
             <div>
                 <button style={{ background: 'none', border: 'none', margin: '0 10px', cursor: 'pointer' }}>
-                    <img src="path_to_image1" alt="Social Media 1" style={{ width: '24px', height: '24px' }} />
+                    <img src="https://w7.pngwing.com/pngs/561/460/png-transparent-fb-facebook-facebook-logo-social-media-icon.png" alt="Facebook" style={{ width: '24px', height: '24px' }} />
                 </button>
                 <button style={{ background: 'none', border: 'none', margin: '0 10px', cursor: 'pointer' }}>
-                    <img src="path_to_image2" alt="Social Media 2" style={{ width: '24px', height: '24px' }} />
+                    <img src="https://c0.klipartz.com/pngpicture/477/609/gratis-png-logo-iconos-de-computadora-logo-de-instagram-logo-de-instagram-thumbnail.png" alt="Social Media 2" style={{ width: '24px', height: '24px' }} />
                 </button>
                 <button style={{ background: 'none', border: 'none', margin: '0 10px', cursor: 'pointer' }}>
-                    <img src="path_to_image3" alt="Social Media 3" style={{ width: '24px', height: '24px' }} />
+                    <img src="https://cdn.icon-icons.com/icons2/2972/PNG/512/whatsapp_logo_icon_186881.png" alt="Social Media 3" style={{ width: '24px', height: '24px' }} />
                 </button>
             </div>
         </footer>
