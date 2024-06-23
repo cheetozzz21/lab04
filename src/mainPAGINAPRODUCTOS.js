@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import productosGeneral from './productosGeneral/general.json';
 import Navbar from 'react-bootstrap/Navbar';
+import feather from 'feather-icons';
+
 
 function MainProductos() {
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
@@ -113,7 +114,11 @@ function MainProductos() {
                                         <div className="fuentemarca">{producto.cantidad}</div>
                                         <div className='fuentestachado'> {producto.descuento}</div>
                                         <div className='fuenteslug'> {producto.slug}</div>
-                                        <button className="botonagre stylebotonagre " >AGREGAR</button>
+                                        <div className="aliboticon">
+                                            <button className="botonagre stylebotonagre " >AGREGAR</button>
+                                            
+                                           <button className="lovboton"><i className="loveicon" data-feather="heart"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                             ))}

@@ -36,6 +36,20 @@
       max-height: 35px;
   }
 
+  .user:hover{
+    max-width: 35px;
+      max-height: 35px;
+  }
+
+  .iconitos{
+    color: #EDEABF;
+  }
+
+  .iconitos:hover{
+    color: white;
+    fill: rgb(255, 255, 255);
+  }
+
 
   .divider {
     height: 1px;

@@ -218,6 +218,8 @@
             font-style: normal;
             font-size: 18px;
             color: #4CAF50;
+            font-style: normal;
+
             font-weight: bold; /* Negrita */
         }
 
@@ -267,3 +269,33 @@
             color: #939493;
             text-decoration: line-through; /* Aplica el tachado desde el inicio */
         }
+
+        .aliboticon {
+            display: flex;
+            align-items: center; /* Alinea verticalmente el botón y el icono */
+        }
+
+        .loveicon{
+            color: #4CAF50;
+          }
+        
+          .loveicon:hover{
+            color: #4CAF50;
+            fill: #4CAF50;
+          }
+
+          .lovboton {
+            background-color: white; 
+            border: none;
+        }
+
+         
+
+
+       
+
+        
+
+        
+
+        

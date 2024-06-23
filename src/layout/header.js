@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import feather from 'feather-icons';
 
 
 function Header() {
@@ -43,13 +44,13 @@ function Header() {
 
                     <div className="col-md-1 d-flex justify-content-center">
                         <div style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <Navbar.Brand href="/"><img src="https://i.imgur.com/tbxdgrD.png" alt="megusta" className="user" style={{ borderRadius: '10%' }} /></Navbar.Brand>
+                        <Navbar.Brand href="/"><i className="iconitos" data-feather="heart"></i></Navbar.Brand>
                         </div>
                     </div>
                     
                     <div className="col-md-1 d-flex justify-content-center">
                         <div style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <Navbar.Brand href="/"><img src="https://i.imgur.com/cuHZxRw.png" alt="Logo" className="user" style={{ borderRadius: '10%' }} /></Navbar.Brand>
+                        <Navbar.Brand href="/"><i className="iconitos" data-feather="shopping-cart"></i></Navbar.Brand>
                         </div>
                     </div>
 
@@ -59,9 +60,7 @@ function Header() {
                             <NavDropdown 
                                 className="d-inline-block " 
                                 alignRight 
-                                title={<img src="https://i.imgur.com/NjVtc52.png" 
-                                        alt="Logo" 
-                                        className="user img-fluid" />} 
+                                title={<i className="iconitos" data-feather="user"></i>} 
                                 id="navbarScrollingDropdown"
                                
                             > 
