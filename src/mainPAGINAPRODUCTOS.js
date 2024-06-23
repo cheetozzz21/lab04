@@ -1,35 +1,80 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import productosGeneral from './productosGeneral/general.json';
 import Navbar from 'react-bootstrap/Navbar';
-import feather from 'feather-icons';
 
-
-function MainProductos() {
+function MainProductos({ history }) {
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
     const [precioSeleccionado, setPrecioSeleccionado] = useState('');
-    const [nombreCategoria, setNombreCategoria] = useState('Todos los Productos');
+    const [marcasSeleccionadas, setMarcasSeleccionadas] = useState([]);
+    const [mostrarMarcas, setMostrarMarcas] = useState(false);
+    const [marcasDisponibles, setMarcasDisponibles] = useState([]);
 
     const productos = productosGeneral;
 
-    const productosFiltrados = productos.filter(producto => {
-        if (categoriaSeleccionada && precioSeleccionado) {
-            return producto.categoria === categoriaSeleccionada && producto.precio === precioSeleccionado;
-        } else if (categoriaSeleccionada) {
-            return producto.categoria === categoriaSeleccionada;
-        } else if (precioSeleccionado) {
-            return producto.precio === precioSeleccionado;
+    useEffect(() => {
+        if (categoriaSeleccionada) {
+            const marcas = obtenerMarcasPorCategoria(categoriaSeleccionada);
+            setMarcasDisponibles(marcas);
         } else {
-            return true;
+            setMarcasDisponibles([]);
         }
+    }, [categoriaSeleccionada]);
+
+    const obtenerMarcasPorCategoria = (categoria) => {
+        // Simulación de obtener marcas únicas por categoría desde los productos
+        const marcas = new Set();
+        productos.forEach(producto => {
+            if (producto.categoria === categoria) {
+                marcas.add(producto.marca);
+            }
+        });
+        return Array.from(marcas);
+    };
+
+    const productosFiltrados = productos.filter(producto => {
+        // Filtrar por categoría y precio
+        let categoriaValida = true;
+        let precioValido = true;
+
+        if (categoriaSeleccionada) {
+            categoriaValida = producto.categoria === categoriaSeleccionada;
+        }
+
+        if (precioSeleccionado) {
+            const [min, max] = precioSeleccionado.split('-');
+            precioValido = producto.precio >= parseInt(min) && producto.precio <= parseInt(max);
+        }
+
+        // Filtrar por marcas seleccionadas
+        let marcaValida = true;
+        if (marcasSeleccionadas.length > 0) {
+            marcaValida = marcasSeleccionadas.includes(producto.marca);
+        }
+
+        return categoriaValida && precioValido && marcaValida;
     });
 
     const handleChangeCategoria = (e) => {
         const categoria = e.target.value;
         setCategoriaSeleccionada(categoria);
-        // Obtener el nombre de la categoría seleccionada
-        const nombre = e.target.options[e.target.selectedIndex].text;
-        setNombreCategoria(nombre);
-    }
+    };
+
+    const handleMarcaChange = (marca) => {
+        if (marcasSeleccionadas.includes(marca)) {
+            setMarcasSeleccionadas(marcasSeleccionadas.filter(item => item !== marca));
+        } else {
+            setMarcasSeleccionadas([...marcasSeleccionadas, marca]);
+        }
+    };
+
+    const handlePrecioChange = (e) => {
+        const precio = e.target.value;
+        setPrecioSeleccionado(precio);
+    };
+
+    const toggleMostrarMarcas = () => {
+        setMostrarMarcas(!mostrarMarcas);
+    };
 
     return (
         <div>
@@ -41,21 +86,22 @@ function MainProductos() {
                                 <li className="breadcrumb-item">
                                     <Navbar.Brand href="/"><img src="https://i.imgur.com/blI3BKX.png" alt="logohome" className="logohome" /></Navbar.Brand>
                                 </li>
-                                <li className="breadcrumb-item active" aria-current="page">{nombreCategoria}</li>
+                                <li className="breadcrumb-item active" aria-current="page">Todos los Productos</li>
                             </ol>
                         </nav>
                         <div className="card">
-
                             <div className="form-group">
                                 <label htmlFor="categorias" className="titulo">Categorías</label>
                                 <select
                                     className="form-control fuentecateg"
                                     id="categorias"
                                     value={categoriaSeleccionada}
-                                    onChange={handleChangeCategoria}
+                                    onChange={(e) => handleChangeCategoria(e)}
+                                    
                                 >
                                     <option value="">Todas las categorías</option>
                                     <option value="abarrotes">Abarrotes</option>
+
                                     <option value="carnes">Carnes</option>
                                     <option value="snacks">Snacks</option>
                                     <option value="bebidas">Bebidas</option>
@@ -64,30 +110,16 @@ function MainProductos() {
                                 </select>
                             </div>
                             <hr />
+
                             <div className="titulo">Filtros</div>
-                            <div className="titulocate">Marca</div>
-                            <div className="form-check">
-                                <input
-                                    className="form-check-input"
-                                    type="checkbox"
-                                    value=""
-                                    id="gloria"
-                                />
-                                <label className="form-check-label fuentesubcateg" htmlFor="gloria">Gloria</label>
-                            </div>
-
-                            <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="mas_vendidos" />
-                                <label className="form-check-label fuentesubcateg" htmlFor="laive">Laive</label>
-                            </div>
-
                             <div className="form-group">
-                                <label htmlFor="precio" className="titulocate">Precio</label>
+                                <label htmlFor="precios" className="titulocate">Precio</label>
                                 <select
                                     className="form-control fuentecateg"
                                     id="precios"
                                     value={precioSeleccionado}
-                                    onChange={(e) => setPrecioSeleccionado(e.target.value)}>
+                                    onChange={(e) => handlePrecioChange(e)}
+                                >
                                     <option value="">Rango de precio</option>
                                     <option value="0-10">S/.0 - S/.10.00</option>
                                     <option value="10-20">S/.10.00 - S/.20.00</option>
@@ -97,34 +129,50 @@ function MainProductos() {
                                 </select>
                             </div>
 
+                            
+                            <div className="titulomarc" onClick={toggleMostrarMarcas}>Marcas
+                                <img src="https://i.imgur.com/THqgYev.png" alt="logomarca" className="logomarca" />
+                                
+                            </div>
+                            {mostrarMarcas && (
+                                <div className="titulocate">
+                                    {marcasDisponibles.map((marca, index) => (
+                                        <div className="form-check" key={index}>
+                                            <input
+                                                className="form-check-input"
+                                                type="checkbox"
+                                                value={marca}
+                                                id={marca}
+                                                checked={marcasSeleccionadas.includes(marca)}
+                                                onChange={() => handleMarcaChange(marca)}
+                                            />
+                                            <label className="form-check-label fuentesubcateg" htmlFor={marca}>{marca}</label>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     </div>
 
                     <div className="col-md-9">
                         <h4 className="text-right text-center titulo">PRODUCTOS</h4>
-
                         <div className="procard row">
-
                             {productosFiltrados.map((producto, index) => (
                                 <div className="col-md-4 mb-4" key={index}>
                                     <div className="procardcat">
-                                        <img src={producto.imagen} className="img-fluid" alt={`Imagen de ${producto.nombre}`} />
+                                        <div className="minicard">
+                                            <img src={producto.imagen} className="img-fluid" alt={`Imagen de ${producto.nombre}`} />
+                                        </div>
                                         <div className="fuentemarca">{producto.marca}</div>
                                         <div className="fuentenombre">{producto.nombre}</div>
                                         <div className="fuentemarca">{producto.cantidad}</div>
                                         <div className='fuentestachado'> {producto.descuento}</div>
                                         <div className='fuenteslug'> {producto.slug}</div>
-                                        <div className="aliboticon">
-                                            <button className="botonagre stylebotonagre " >AGREGAR</button>
-                                            
-                                           <button className="lovboton"><i className="loveicon" data-feather="heart"></i></button>
-                                        </div>
+                                        <button className="botonagre stylebotonagre " >AGREGAR</button>
                                     </div>
                                 </div>
                             ))}
-
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -133,4 +181,6 @@ function MainProductos() {
 }
 
 export default MainProductos;
+
+
 

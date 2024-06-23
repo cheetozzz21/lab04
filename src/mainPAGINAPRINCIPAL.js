@@ -4,6 +4,7 @@ import './stylemain.css';
 import { useNavigate } from 'react-router-dom';
 import feather from 'feather-icons';
 import productos from './data/productosPaginaPrincipal.json';
+
 import './style.css';
 import './category.css';
 import categorias from './categoriasCarrusel/product.json';

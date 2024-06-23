@@ -43,15 +43,11 @@ function Header() {
 
 
                     <div className="col-md-1 d-flex justify-content-center">
-                        <div style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <Navbar.Brand href="/"><i className="iconitos" data-feather="heart"></i></Navbar.Brand>
-                        </div>
+                        <Navbar.Brand href="/favoritos"><i className="iconitos" data-feather="heart"></i></Navbar.Brand>
                     </div>
                     
                     <div className="col-md-1 d-flex justify-content-center">
-                        <div style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                         <Navbar.Brand href="/"><i className="iconitos" data-feather="shopping-cart"></i></Navbar.Brand>
-                        </div>
                     </div>
 
                     

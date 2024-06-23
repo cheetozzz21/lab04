@@ -151,11 +151,13 @@
               max-height: 23px;
               
           }
+          
           .titulocate {
             font-family: "Poppins", sans-serif;
             font-weight: bold; /* Negrita */
             font-style: normal;
             font-size: 12px;
+            cursor: pointer;
         }
 
           .fuentecateg{
@@ -163,6 +165,7 @@
             font-style: normal;
             font-size: 12px;
             color: #808080;
+            cursor: pointer;
           }
 
           .fuentesubcateg{
@@ -187,8 +190,21 @@
             border-radius: 9px; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(146, 145, 145, 0.1); /* Sombra para dar profundidad */
             padding: 18px;
-
         }
+
+        .minicard {
+            padding: 10px;
+            position: relative; /* Necesario para controlar el overlay */
+        }
+        .minicard img {
+            transition: transform 0.3s ease; /* Transición suave de la transformación */
+        }
+        
+        .minicard:hover img {
+            transform: scale(1.1); /* Escala del 110% al pasar el mouse */
+        }
+            
+        
 
         .procardcat:hover {
             border: 2px solid #e7e6e6;; /* Borde de 2 píxeles de grosor, color azul */
@@ -197,6 +213,8 @@
             padding: 18px;
             
         }
+
+        
 
         .fuentemarca{
             font-family: "Poppins", sans-serif;
@@ -275,19 +293,56 @@
             align-items: center; /* Alinea verticalmente el botón y el icono */
         }
 
-        .loveicon{
+        .like-button {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            color: #333;
+            cursor: pointer;
+          }
+          
+          .like-button:hover {
             color: #4CAF50;
           }
-        
-          .loveicon:hover{
-            color: #4CAF50;
-            fill: #4CAF50;
+          
+          .loveicon {
+            color: #4CAF50; /* Color inicial del ícono */
+            transition: color 0.3s ease;
+          }
+          
+          .like-button.liked .loveicon {
+            color: #4CAF50; /* Color cuando está clicado borde */
+            fill: #4CAF50; /* Color cuando está clicado pintado-fondo */
+
           }
 
-          .lovboton {
-            background-color: white; 
-            border: none;
+
+          .logomarca{
+            max-width: 12px;
+              max-height: 12px;
+              margin-left: 170px;
+              
+          }
+
+
+          .selectcat{
+            max-width: 12px;
+              max-height: 12px;
+              margin-left: 5px;
+              
+          }
+
+          .titulomarc {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold; /* Negrita */
+            font-style: normal;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 13px;
         }
+
+          
 
          
 

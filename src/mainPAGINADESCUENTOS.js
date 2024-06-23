@@ -10,6 +10,8 @@ function MainDescuentos() {
 
     const productos = productosGeneral;
 
+
+
     const productosFiltrados = productos.filter(producto => {
         // Filtrar solo los productos que tienen descuento definido
         return producto.descuento !== undefined && producto.descuento !== '';
@@ -25,6 +27,16 @@ function MainDescuentos() {
         }
     });
 
+    // Estado para manejar los likes de cada producto
+    const [likes, setLikes] = useState({});
+
+    // Función para manejar el clic de "Me gusta"
+    const handleLikeClick = (id) => {
+        setLikes(prevLikes => ({
+            ...prevLikes,
+            [id]: !prevLikes[id] // Cambia el estado de like para el producto identificado por su id
+        }));
+    };
 
     const handleChangeCategoria = (e) => {
         const categoria = e.target.value;
@@ -104,14 +116,16 @@ function MainDescuentos() {
                     </div>
 
                     <div className="col-md-9">
-                        <h4 className="text-right text-center titulo">PRODUCTOS</h4>
+                        <h4 className="text-right text-center titulo">DESCUENTOS</h4>
 
                         <div className="procard row">
 
                             {productosFiltrados.map((producto, index) => (
                                 <div className="col-md-4 mb-4" key={index}>
                                     <div className="procardcat">
-                                        <img src={producto.imagen} className="img-fluid" alt={`Imagen de ${producto.nombre}`} />
+                                        <div className="minicard">
+                                                <img src={producto.imagen} className="img-fluid" alt={`Imagen de ${producto.nombre}`} />
+                                            </div>
                                         <div className="fuentemarca">{producto.marca}</div>
                                         <div className="fuentenombre">{producto.nombre}</div>
                                         <div className="fuentemarca">{producto.cantidad}</div>
@@ -119,8 +133,9 @@ function MainDescuentos() {
                                         <div className='fuenteslug'> {producto.slug}</div>
                                         <div className="aliboticon">
                                             <button className="botonagre stylebotonagre " >AGREGAR</button>
-                                            
-                                           <button className="lovboton"><i className="loveicon" data-feather="heart"></i></button>
+                                            <button className={`like-button ${likes[producto.id] ? 'liked' : ''}`} onClick={() => handleLikeClick(producto.id)}>
+                                                <i className="loveicon" data-feather="heart"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

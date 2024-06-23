@@ -6,6 +6,7 @@ import MainProductos from "./mainPAGINAPRODUCTOS";
 import MainPrincipal from "./mainPAGINAPRINCIPAL";
 import MainDescuentos from "./mainPAGINADESCUENTOS";
 import InicioSesion from "./inicioSesion";
+import FavoritoPro from "./mainFavoritosProduct";
 
 import {
     createBrowserRouter,
@@ -57,16 +58,25 @@ const router = createBrowserRouter([
                 path: "/productos",
                 element: <MainProductos />,
             },
+
             {
                 path: "/principal",
                 element: <MainPrincipal />,
             },
+
             {
                 path: "/descuentos",
                 element: <MainDescuentos />,
             },
+
+            {
+                path: "/favoritos",
+                element: <FavoritoPro />,
+            },
+            
             
         ],
+
     },
 ]);
 
