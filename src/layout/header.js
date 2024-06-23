@@ -1,4 +1,3 @@
-import "../stylehead.css"
 import { Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';

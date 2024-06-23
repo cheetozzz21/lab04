@@ -1,0 +1,122 @@
+[
+    { 
+        "marca": "GLORIA",
+        "nombre": "Leche Gloria",
+        "slug": "S/.20.90",
+        "cantidad": " Presentación: 1 L",
+        "precio": "20-30",
+        "descuento": "S/20.00",
+        "categoria": "bebidas",
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/28594257-512-512/929548.jpg"
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "AVENA QUAKER", 
+        "slug": "S/.20.90",
+        "cantidad": " Presentación: 1 L",
+        "precio": "10-20", 
+        "descuento": "",
+        "categoria": "abarrotes", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/27425458-512-512/20251263.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "FRUGOS DEL VALLE", 
+        "slug": "S/.6.00", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "0-10", 
+        "descuento": "",
+        "categoria": "bebidas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/26624105-1000-1000/963407.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "JACK DANIELS", 
+        "slug": "S/.139.90",
+        "cantidad": " Presentación: 1 L", 
+        "precio": "40+", 
+        "descuento": "S/20.00",
+        "categoria": "bebidas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/28565879-1000-1000/20389760.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "FILETE", 
+        "slug": "S/.7.00", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "0*-10", 
+        "descuento": "S/20.00",
+        "categoria": "carnes", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/646372-1000-1000/20110600.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "ACEITE PRIMOR", 
+        "slug": "S/.11.5", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "10-20", 
+        "descuento": "S/20.00",
+        "categoria": "abarrotes", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/28196096-1000-1000/20235718.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "CHOCOLATE", 
+        "slug": "S/.8.6", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "0-10", 
+        "descuento": "S/20.00",
+        "categoria": "snacks", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/553666-1000-1000/99837.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "ATUN", 
+        "slug": "S/.5.90", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "0-10", 
+        "descuento": "S/20.00",
+        "categoria": "abarrotes", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/18082704-1000-1000/20283923.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "ESCOBA", 
+        "slug": "S/.35.00", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "30-40", 
+        "descuento": "S/20.00",
+        "categoria": "limpieza", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/22086511-1000-1000/768467.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "RECOGEDOR", 
+        "slug": "S/.30.90", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "30-40", 
+        "descuento": "S/20.00",
+        "categoria": "limpieza", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/26370272-1000-1000/image-b48f942ef36246b9b9a0567326098ea4.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "SHAMPOO", 
+        "slug": "S/.16.50", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "10-20", 
+        "descuento": "S/20.00",
+        "categoria": "usopersonal", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/22657198-1000-1000/20325276.jpg" 
+    },
+    { 
+        "marca": "GLORIA",
+        "nombre": "HABAS", 
+        "slug": "S/.7.50", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "0-10", 
+        "descuento": "S/20.00",
+        "categoria": "snacks", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/8125902-1000-1000/20052880.jpg" 
+    }
+]

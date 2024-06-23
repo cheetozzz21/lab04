@@ -88,19 +88,20 @@
             /* Espaciado interno del rectángulo */
         }
 
-        .about-card {
-            width: calc(30% - 20px);
+        .card {
+            width: 250px;
             /* Ancho de las tarjetas de "quienes somos" */
             margin-right: 20px;
             /* Espaciado entre las tarjetas */
-            background-color: #D6E8EE;
+            background-color: #ffffff;
             /* Color de fondo de las tarjetas */
-            padding: 20px;
+            padding: 8px;
             /* Espaciado interno de las tarjetas */
             display: inline-block;
             /* Mantiene las tarjetas en una línea */
             vertical-align: top;
             /* Alinea las tarjetas arriba */
+            
         }
 
         .about-title {
@@ -115,4 +116,154 @@
         .about-content {
             text-align: justify;
             /* Alineación del contenido justificado */
+        }
+    
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: " > "; /* Utiliza ">" como separador entre elementos de breadcrumb */
+            color: #808080;
+        }
+        
+        .breadcrumb-item.active {
+            font-size: 0.8em;
+            color: #808080;
+            font-family: "Poppins", sans-serif;
+            display: flex; /* Usa flexbox para alinear elementos */
+            align-items: center; /* Centra verticalmente los elementos */
+        }
+
+
+        .poppins-pro {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+        
+          .titulo {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold; /* Negrita */
+            font-style: normal;
+            font-size: 16px;
+        }
+
+        .logohome{
+            max-width: 23px;
+              max-height: 23px;
+              
+          }
+          .titulocate {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold; /* Negrita */
+            font-style: normal;
+            font-size: 12px;
+        }
+
+          .fuentecateg{
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-size: 12px;
+            color: #808080;
+          }
+
+          .fuentesubcateg{
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-size: 14px;
+            color: #808080;
+          }
+
+
+          .procard {
+            border: 1px solid #e7e6e6;; /* Borde de 2 píxeles de grosor, color azul */
+            background-color: #ffffff; /* Color de fondo gris claro */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(146, 145, 145, 0.1); /* Sombra para dar profundidad */
+            padding: 20px; /* Padding interno */
+
+        }
+
+        .procardcat {
+            border: 2px solid #e7e6e6;; /* Borde de 2 píxeles de grosor, color azul */
+            border-radius: 9px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(146, 145, 145, 0.1); /* Sombra para dar profundidad */
+            padding: 18px;
+
+        }
+
+        .procardcat:hover {
+            border: 2px solid #e7e6e6;; /* Borde de 2 píxeles de grosor, color azul */
+            border-radius: 9px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(146, 145, 145, 1); /* Sombra para dar profundidad */
+            padding: 18px;
+            
+        }
+
+        .fuentemarca{
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-size: 14px;
+            color: #808080;
+          }
+
+        .fuentenombre{
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-size: 18px;
+            color: #212020;
+            font-weight: bold; /* Negrita */
+        }
+
+        .fuenteslug{
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-size: 18px;
+            color: #4CAF50;
+            font-weight: bold; /* Negrita */
+        }
+
+
+        .botonagre {
+            border:none;
+            padding: 4px 14px;
+            text-align: center;
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            font-optical-sizing: auto;
+          }
+
+        .stylebotonagre {
+            background-color: #ffffff;
+            color: #4CAF50;
+            padding: 1px 10px;
+            border: 2px solid #4CAF50;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            border-radius: 12px;
+            display: block; /* Para centrar el botón */
+            margin: 0 auto; /* Para centrar el botón */
+            width: 150px; /* Ancho del botón */
+            height: 40px; /* Altura del botón */
+        }
+        
+        /* Cambiar el color del texto al pasar el mouse por encima */
+        .stylebotonagre:hover {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 1px 10px;
+            border: 2px solid #4CAF50;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-weight: bold;
+            border-radius: 15px;
+            display: block; /* Para centrar el botón */
+            margin: 0 auto; /* Para centrar el botón */
+            width: 150px; /* Ancho del botón */
+            height: 40px; /* Altura del botón */    
+        }
+
+        .fuentestachado {
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            color: #939493;
+            text-decoration: line-through; /* Aplica el tachado desde el inicio */
         }
