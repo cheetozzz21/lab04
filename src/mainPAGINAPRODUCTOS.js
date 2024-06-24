@@ -3,13 +3,14 @@ import productosGeneral from './productosGeneral/general.json';
 import Navbar from 'react-bootstrap/Navbar';
 
 function MainProductos({ history }) {
+    const productos = productosGeneral;
+
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
     const [precioSeleccionado, setPrecioSeleccionado] = useState('');
     const [marcasSeleccionadas, setMarcasSeleccionadas] = useState([]);
     const [mostrarMarcas, setMostrarMarcas] = useState(false);
     const [marcasDisponibles, setMarcasDisponibles] = useState([]);
 
-    const productos = productosGeneral;
 
     useEffect(() => {
         if (categoriaSeleccionada) {
@@ -34,15 +35,16 @@ function MainProductos({ history }) {
     const productosFiltrados = productos.filter(producto => {
         // Filtrar por categoría y precio
         let categoriaValida = true;
-        let precioValido = true;
-
         if (categoriaSeleccionada) {
             categoriaValida = producto.categoria === categoriaSeleccionada;
         }
-
+    
+        let precioValido = true;
         if (precioSeleccionado) {
             const [min, max] = precioSeleccionado.split('-');
-            precioValido = producto.precio >= parseInt(min) && producto.precio <= parseInt(max);
+            // Convertir min y max a números enteros
+            const precioProducto = parseFloat(producto.precio); 
+            precioValido = precioProducto >= parseFloat(min) && precioProducto <= parseFloat(max);
         }
 
         // Filtrar por marcas seleccionadas
@@ -67,10 +69,7 @@ function MainProductos({ history }) {
         }
     };
 
-    const handlePrecioChange = (e) => {
-        const precio = e.target.value;
-        setPrecioSeleccionado(precio);
-    };
+    
 
     const toggleMostrarMarcas = () => {
         setMostrarMarcas(!mostrarMarcas);
@@ -118,7 +117,7 @@ function MainProductos({ history }) {
                                     className="form-control fuentecateg"
                                     id="precios"
                                     value={precioSeleccionado}
-                                    onChange={(e) => handlePrecioChange(e)}
+                                    onChange={(e) => setPrecioSeleccionado(e.target.value)}
                                 >
                                     <option value="">Rango de precio</option>
                                     <option value="0-10">S/.0 - S/.10.00</option>

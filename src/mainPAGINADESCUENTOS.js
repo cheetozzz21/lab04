@@ -15,6 +15,7 @@ function MainDescuentos() {
     const productosFiltrados = productos.filter(producto => {
         // Filtrar solo los productos que tienen descuento definido
         return producto.descuento !== undefined && producto.descuento !== '';
+
     }).filter(producto => {
         if (categoriaSeleccionada && precioSeleccionado) {
             return producto.categoria === categoriaSeleccionada && producto.precio === precioSeleccionado;
@@ -38,6 +39,7 @@ function MainDescuentos() {
         }));
     };
 
+
     const handleChangeCategoria = (e) => {
         const categoria = e.target.value;
         setCategoriaSeleccionada(categoria);
@@ -45,6 +47,7 @@ function MainDescuentos() {
         const nombre = e.target.options[e.target.selectedIndex].text;
         setNombreCategoria(nombre);
     }
+        
 
     return (
         <div>
@@ -124,8 +127,8 @@ function MainDescuentos() {
                                 <div className="col-md-4 mb-4" key={index}>
                                     <div className="procardcat">
                                         <div className="minicard">
-                                                <img src={producto.imagen} className="img-fluid" alt={`Imagen de ${producto.nombre}`} />
-                                            </div>
+                                            <img src={producto.imagen} className="img-fluid" alt={`Imagen de ${producto.nombre}`} />
+                                        </div>
                                         <div className="fuentemarca">{producto.marca}</div>
                                         <div className="fuentenombre">{producto.nombre}</div>
                                         <div className="fuentemarca">{producto.cantidad}</div>
