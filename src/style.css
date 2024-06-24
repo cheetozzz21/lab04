@@ -89,18 +89,42 @@
     font-family: "Tahoma", sans-serif;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    color: #f8f8d2;
   }
 
   .search {
-    border:none;
-    padding: 4px 10px;
-    text-align: center;
-    font-size: 13px;
-    font-family: "Tahoma", sans-serif;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+    width: 80%; /* Ancho del contenedor de búsqueda */
+    max-width: 500px; /* Opcional: ajusta el máximo ancho según tus necesidades */
+    background-color: #f8f8d2; /* Color de fondo */
+    border-radius: 25px; /* Radio de borde */
+    padding: 5px 10px; /* Relleno interno */
+}
+
+.search-input {
+    width: calc(100% - 30px); /* Ajusta el ancho del input, considerando el espacio del ícono */
+    height: 25px; /* Altura del input */
+    font-size: 15px; /* Tamaño de fuente */
+    font-family: "Poppins", sans-serif; /* Fuente */
+    border: none; /* Quita el borde del input si quieres usar solo el borde del contenedor */
+    outline: none; /* Quita el contorno al hacer clic */
+    background: transparent; /* Fondo transparente */
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px; /* Ajusta la posición del ícono a la derecha */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+    color: #888; /* Color del ícono */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+}
 
   .stylebutton {
     background-color: transparent;
@@ -113,8 +137,11 @@
 
 /* Cambiar el color del texto al pasar el mouse por encima */
 .stylebutton:hover {
-    color: #ffffff; /* Cambia este color según tu preferencia */
     font-weight: bold;
+    background-color: #50aa0c;
+    padding: 1px 10px;
+    border: 0px solid #69df0f;
+    border-radius: 12px;
 
 }
 

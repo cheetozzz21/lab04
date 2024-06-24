@@ -177,18 +177,18 @@
 
 
           .procard {
-            border: 1px solid #e7e6e6;; /* Borde de 2 píxeles de grosor, color azul */
-            background-color: #ffffff; /* Color de fondo gris claro */
+            border: 1px solid #d6d6d6;; /* Borde de 1 píxel de grosor, color azul */
+            background-color: #ffffff; /* Fondo blanco */
             border-radius: 8px; /* Bordes redondeados */
-            box-shadow: 0 4px 8px rgba(146, 145, 145, 0.1); /* Sombra para dar profundidad */
+            box-shadow: 0 4px 8px rgba(80, 80, 80, 0.1); /* Sombra para dar profundidad */
             padding: 20px; /* Padding interno */
 
         }
 
         .procardcat {
-            border: 2px solid #e7e6e6;; /* Borde de 2 píxeles de grosor, color azul */
+            border: 0px solid #d6d6d6;; /* Borde de 2 píxeles de grosor, color azul */
             border-radius: 9px; /* Bordes redondeados */
-            box-shadow: 0 4px 8px rgba(146, 145, 145, 0.1); /* Sombra para dar profundidad */
+            box-shadow: 1 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
             padding: 18px;
         }
 
@@ -263,6 +263,7 @@
             margin: 0 auto; /* Para centrar el botón */
             width: 150px; /* Ancho del botón */
             height: 40px; /* Altura del botón */
+            margin-top: 13px;
         }
         
         /* Cambiar el color del texto al pasar el mouse por encima */

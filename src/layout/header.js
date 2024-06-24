@@ -22,7 +22,9 @@ function Header() {
                     
                     <div className="col-md-1 text-center">
                         <Link to="/productos">
-                            <button className="botonbarra stylebutton " >Productos</button>
+                            <button className=" stylebutton" >
+                                <div className="botonbarra">Productos</div>
+                                </button>
                         </Link>
                     </div>
                     <div className="col-md-1 text-center">
@@ -32,48 +34,55 @@ function Header() {
                     </div>
 
 
-                    <div className="col-md-6 d-flex justify-content-center">
-                        <input 
-                            type="text" 
-                            className="search " 
-                            placeholder="Search" 
-                            style={{ borderRadius: '15px', padding: '5px 10px', width: '80%', backgroundColor: '#EDEABF',textAlign: 'left' }} 
-                        />
+                    <div className="col-md-6 d-flex justify-content-center search">
+                        <div className="search-container">
+                            <input 
+                                type="text"
+                                placeholder="Search"
+                                className="search-input"
+                            />
+                            <span className="search-icon" data-feather="search"></span>
+                        </div>
                     </div>
-
-
-                    <div className="col-md-1 d-flex justify-content-center">
-                        <Navbar.Brand href="/favoritos"><i className="iconitos" data-feather="heart"></i></Navbar.Brand>
-                    </div>
+          
+                        <div className="col-md-1 justify-content-right botonbarra stylebutton">
+                            <Navbar.Brand href="/"><i className="iconitos " data-feather="shopping-cart"></i> Mi carrito</Navbar.Brand>
+                        </div>
+                        
+                        <div className="col-md-1 d-flex justify-content-center botonbarra stylebutton">
+                            <Navbar.Brand href="/favoritos"> <i className="iconitos" data-feather="heart"></i> Favoritos</Navbar.Brand>
+                        </div>
+                        
+            
+                        <div className="col-md-1 botonbarra stylebutton">
+                                <NavDropdown 
+                                    className="d-inline-block " 
+                                    alignRight 
+                                    title={
+                                        <div>
+                                            <i className="iconitos" data-feather="user"></i>Mi sesión
+                                            </div>
+                                        
+                                    } 
+                                    id="navbarScrollingDropdown"
+                                
+                                >
+                                        
+                                        <NavDropdown.Item className="negrita-user" href="/iniciar-Sesion">
+                                            <i data-feather="user"></i> Iniciar sesión/Registrarse
+                                        </NavDropdown.Item>
+                                        <div className="divider"></div>
+                                        <NavDropdown.Item className="negrita-user" href="#action3">
+                                            <i data-feather="shopping-bag"></i> Mis pedidos
+                                        </NavDropdown.Item>
+                                        <NavDropdown.Item className="negrita-user" href="#action4">
+                                            <i data-feather="package"></i> Mis productos
+                                        </NavDropdown.Item>
+                                                
+                                </NavDropdown>                             
+                        </div>
+              
                     
-                    <div className="col-md-1 d-flex justify-content-center">
-                        <Navbar.Brand href="/"><i className="iconitos" data-feather="shopping-cart"></i></Navbar.Brand>
-                    </div>
-
-                    
-
-                    <div className="col-md-1">
-                            <NavDropdown 
-                                className="d-inline-block " 
-                                alignRight 
-                                title={<i className="iconitos" data-feather="user"></i>} 
-                                id="navbarScrollingDropdown"
-                               
-                            > 
-                                    
-                                    <NavDropdown.Item className="negrita-user" href="/iniciar-Sesion">
-        <i data-feather="user"></i> Iniciar sesión/Registrarse
-      </NavDropdown.Item>
-      <div className="divider"></div>
-      <NavDropdown.Item className="negrita-user" href="#action3">
-        <i data-feather="shopping-bag"></i> Mis pedidos
-      </NavDropdown.Item>
-      <NavDropdown.Item className="negrita-user" href="#action4">
-        <i data-feather="package"></i> Mis productos
-      </NavDropdown.Item>
-                                              
-                            </NavDropdown>                             
-                    </div>
                 </div>
             </div>
         </header>

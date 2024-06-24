@@ -10,22 +10,18 @@ function MainProductos({ history }) {
     const [marcasSeleccionadas, setMarcasSeleccionadas] = useState([]);
     const [mostrarMarcas, setMostrarMarcas] = useState(false);
     const [marcasDisponibles, setMarcasDisponibles] = useState([]);
+    const [nombreCategoria, setNombreCategoria] = useState('Todos los Productos');
 
 
     useEffect(() => {
-        if (categoriaSeleccionada) {
-            const marcas = obtenerMarcasPorCategoria(categoriaSeleccionada);
-            setMarcasDisponibles(marcas);
-        } else {
-            setMarcasDisponibles([]);
-        }
+        const marcas = obtenerMarcasPorCategoria(categoriaSeleccionada);
+        setMarcasDisponibles(marcas);
     }, [categoriaSeleccionada]);
 
     const obtenerMarcasPorCategoria = (categoria) => {
-        // Simulación de obtener marcas únicas por categoría desde los productos
         const marcas = new Set();
         productos.forEach(producto => {
-            if (producto.categoria === categoria) {
+            if (!categoria || producto.categoria === categoria) {
                 marcas.add(producto.marca);
             }
         });
@@ -59,6 +55,10 @@ function MainProductos({ history }) {
     const handleChangeCategoria = (e) => {
         const categoria = e.target.value;
         setCategoriaSeleccionada(categoria);
+    
+        // Obtener y establecer el nombre de la categoría seleccionada
+        const nombre = e.target.options[e.target.selectedIndex].text;
+        setNombreCategoria(nombre);
     };
 
     const handleMarcaChange = (marca) => {
@@ -85,7 +85,10 @@ function MainProductos({ history }) {
                                 <li className="breadcrumb-item">
                                     <Navbar.Brand href="/"><img src="https://i.imgur.com/blI3BKX.png" alt="logohome" className="logohome" /></Navbar.Brand>
                                 </li>
-                                <li className="breadcrumb-item active" aria-current="page">Todos los Productos</li>
+                                
+                                <li className="breadcrumb-item active" aria-current="page">
+                                    <Navbar.Brand href="/productos"Todos los Productos>{nombreCategoria}</Navbar.Brand>
+                                </li>
                             </ol>
                         </nav>
                         <div className="card">
