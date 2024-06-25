@@ -18,7 +18,7 @@
         "cantidad": " Presentación: 900g",
         "precio": "20-30", 
         "descuento": "",
-        "categoria": "abarrotes", 
+        "categoria": "cereales y granos", 
         "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/27425458-512-512/20251263.jpg" 
     },
     { 
@@ -62,7 +62,7 @@
         "cantidad": " Presentación: 1 L",
         "precio": "10-20", 
         "descuento": "S/20.00",
-        "categoria": "abarrotes", 
+        "categoria": "aceites y grasas", 
         "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/28196096-1000-1000/20235718.jpg" 
     },
     { 
@@ -84,7 +84,7 @@
         "cantidad": " Presentación: 350gr",
         "precio": "0-10", 
         "descuento": "S/7.00",
-        "categoria": "abarrotes", 
+        "categoria": "enlatados y conservas", 
         "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/18082704-1000-1000/20283923.jpg" 
     },
     { 

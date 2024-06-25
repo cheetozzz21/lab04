@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import productosGeneral from './productosGeneral/general.json';
 import Navbar from 'react-bootstrap/Navbar';
 
-function MainProductos({ history }) {
+function MainProductos() {
     const productos = productosGeneral;
 
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
@@ -10,22 +10,30 @@ function MainProductos({ history }) {
     const [marcasSeleccionadas, setMarcasSeleccionadas] = useState([]);
     const [mostrarMarcas, setMostrarMarcas] = useState(false);
     const [marcasDisponibles, setMarcasDisponibles] = useState([]);
-    const [nombreCategoria, setNombreCategoria] = useState('Todos los Productos');
+    const [nombreCategoria, setNombreCategoria] = useState('');
 
 
     useEffect(() => {
-        const marcas = obtenerMarcasPorCategoria(categoriaSeleccionada);
+        const marcas = obtenerMarcasPorCategoriaYPrecio(categoriaSeleccionada, precioSeleccionado);
         setMarcasDisponibles(marcas);
-    }, [categoriaSeleccionada]);
+    }, [categoriaSeleccionada, precioSeleccionado]);
 
-    const obtenerMarcasPorCategoria = (categoria) => {
+    const obtenerMarcasPorCategoriaYPrecio = (categoria, precio) => {
         const marcas = new Set();
         productos.forEach(producto => {
-            if (!categoria || producto.categoria === categoria) {
+            if ((!categoria || producto.categoria === categoria) &&
+                (!precio || precioValido(producto.precio, precio))) {
                 marcas.add(producto.marca);
             }
         });
         return Array.from(marcas);
+    };
+
+    // Función para validar si el precio del producto está dentro del rango seleccionado
+    const precioValido = (precioProducto, rangoPrecio) => {
+        const [min, max] = rangoPrecio.split('-');
+        const precio = parseFloat(precioProducto);
+        return precio >= parseFloat(min) && precio <= parseFloat(max);
     };
 
     const productosFiltrados = productos.filter(producto => {
@@ -81,19 +89,27 @@ function MainProductos({ history }) {
                 <div className="row mt-4">
                     <div className="col-md-3">
                         <nav aria-label="breadcrumb">
-                            <ol className="breadcrumb">
-                                <li className="breadcrumb-item">
-                                    <Navbar.Brand href="/"><img src="https://i.imgur.com/blI3BKX.png" alt="logohome" className="logohome" /></Navbar.Brand>
-                                </li>
-                                
-                                <li className="breadcrumb-item active" aria-current="page">
-                                    <Navbar.Brand href="/productos"Todos los Productos>{nombreCategoria}</Navbar.Brand>
-                                </li>
-                            </ol>
+                                <ol className="breadcrumb">
+                                    <li className="breadcrumb-item">
+                                        <Navbar.Brand href="/"><img src="https://i.imgur.com/blI3BKX.png" alt="logohome" className="logohome" /></Navbar.Brand>
+                                    </li>
+                                    
+                                    <li className="breadcrumb-item active" aria-current="page">
+                                        <Navbar.Brand href="/productos">Categorías</Navbar.Brand>
+                                    </li>
+
+                                    {categoriaSeleccionada && (
+                                        <li className="breadcrumb-item active" aria-current="page">
+                                            {nombreCategoria}
+                                        </li>
+                                    )}
+                                </ol>
                         </nav>
                         <div className="card">
                             <div className="form-group">
+                                
                                 <label htmlFor="categorias" className="titulo">Categorías</label>
+                                
                                 <select
                                     className="form-control fuentecateg"
                                     id="categorias"
@@ -102,13 +118,16 @@ function MainProductos({ history }) {
                                     
                                 >
                                     <option value="">Todas las categorías</option>
-                                    <option value="abarrotes">Abarrotes</option>
-
-                                    <option value="carnes">Carnes</option>
-                                    <option value="snacks">Snacks</option>
+                                    <option value="aceites y grasas">Aceites y grasas</option>
                                     <option value="bebidas">Bebidas</option>
-                                    <option value="usopersonal">Uso Personal</option>
+                                    <option value="usopersonal">Cuidado Personal</option>
+                                    <option value="carnes">Carnes</option>
+                                    <option value="cereales">Cereales</option>
+                                    <option value="enlatados y conservas">Enlatados y conservas</option>
                                     <option value="limpieza">Limpieza</option>
+                                    <option value="papeleria">Papeleria</option>
+                                    <option value="snacks">Snacks</option>
+                                                                      
                                 </select>
                             </div>
                             <hr />
@@ -157,7 +176,7 @@ function MainProductos({ history }) {
                     </div>
 
                     <div className="col-md-9">
-                        <h4 className="text-right text-center titulo">PRODUCTOS</h4>
+                        <h4 className="text-right text-center tit-pro">PRODUCTOS</h4>
                         <div className="procard row">
                             {productosFiltrados.map((producto, index) => (
                                 <div className="col-md-4 mb-4" key={index}>

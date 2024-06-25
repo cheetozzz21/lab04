@@ -89,7 +89,7 @@
         }
 
         .card {
-            width: 250px;
+            width: 290px;
             /* Ancho de las tarjetas de "quienes somos" */
             margin-right: 20px;
             /* Espaciado entre las tarjetas */
@@ -101,7 +101,7 @@
             /* Mantiene las tarjetas en una línea */
             vertical-align: top;
             /* Alinea las tarjetas arriba */
-            
+
         }
 
         .about-title {
@@ -146,6 +146,14 @@
             font-size: 16px;
         }
 
+        .tit-pro {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold; /* Negrita */
+            font-style: normal;
+            font-size: 20px;
+            margin-bottom: 17px;
+        }
+
         .logohome{
             max-width: 23px;
               max-height: 23px;
@@ -182,7 +190,8 @@
             border-radius: 8px; /* Bordes redondeados */
             box-shadow: 0 4px 8px rgba(80, 80, 80, 0.1); /* Sombra para dar profundidad */
             padding: 20px; /* Padding interno */
-
+            
+            
         }
 
         .procardcat {
@@ -326,6 +335,13 @@
               
           }
 
+          .logo-pro{
+            max-width: 12px;
+              max-height: 12px;
+              margin-left: 88px;
+              
+          }
+
 
           .selectcat{
             max-width: 12px;
@@ -343,6 +359,15 @@
             margin-top: 13px;
         }
 
+
+        .estatico {
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ajusta según sea necesario */
+            
+        }
+
+       
           
 
          
