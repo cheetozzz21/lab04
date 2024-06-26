@@ -130,5 +130,176 @@
         "descuento": "S/9.50",
         "categoria": "snacks", 
         "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/8125902-1000-1000/20052880.jpg" 
+    },
+    
+
+
+    { 
+        "id": "13",
+        "marca": "EL OLIVAR",
+        "nombre": "Aceite de oliva", 
+        "slug": "S/.45", 
+        "cantidad": " Presentación: 500 ml",
+        "precio": "40+", 
+        "descuento": "S/65.00",
+        "categoria": "aceites y grasas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/550600-1000-1000/2204.jpg" 
+    },
+    { 
+        "id": "14",
+        "marca": "VALDEPORRES",
+        "nombre": "Aceite de oliva", 
+        "slug": "S/.42.50", 
+        "cantidad": " Presentación: 500 ml",
+        "precio": "40+", 
+        "descuento": "S/60.00",
+        "categoria": "aceites y grasas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/553602-1000-1000/20083515.jpg" 
+    },
+    { 
+        "id": "15",
+        "marca": "SOYA",
+        "nombre": "Aceite", 
+        "slug": "S/.5.70", 
+        "cantidad": " Presentación: 900 ml",
+        "precio": "0-10", 
+        "descuento": "S/8.50",
+        "categoria": "aceites y grasas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/4159435-1000-1000/107285.jpg" 
+    },
+    { 
+        "id": "16",
+        "marca": "COCINERO",
+        "nombre": "Aceite", 
+        "slug": "S/.7.50", 
+        "cantidad": " Presentación: 900 ml",
+        "precio": "0-10", 
+        "descuento": "S/10.00",
+        "categoria": "aceites y grasas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/16382490-1000-1000/20281567.jpg" 
+    },
+    { 
+        "id": "17",
+        "marca": "DELEITE",
+        "nombre": "Aceite", 
+        "slug": "S/.6.50", 
+        "cantidad": " Presentación: 900 ml",
+        "precio": "0-10", 
+        "descuento": "",
+        "categoria": "aceites y grasas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/2465695-1000-1000/20238463.jpg" 
+    },
+    { 
+        "id": "18",
+        "marca": "BELLS",
+        "nombre": "Aceite de soya", 
+        "slug": "S/.6.20", 
+        "cantidad": " Presentación: 900 ml",
+        "precio": "0-10", 
+        "descuento": "",
+        "categoria": "aceites y grasas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/5002512-1000-1000/21592.jpg" 
+    },
+    {
+        "id": "19",
+       "marca": "BELLS",
+        "nombre": "Aceite de oliva", 
+        "slug": "S/.64.80", 
+        "cantidad": " Presentación: 1 L",
+        "precio": "40+", 
+        "descuento": "",
+        "categoria": "aceites y grasas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/10256082-1000-1000/20207183.jpg" 
+    },
+    { 
+        "id": "20",
+        "marca": "SAO",
+        "nombre": "Aceite de soya", 
+        "slug": "S/.6.40", 
+        "cantidad": " Presentación: 900 ML",
+        "precio": "0-10", 
+        "descuento": "",
+        "categoria": "aceites y grasas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/16382489-1000-1000/20281565.jpg"  
+    },
+    { 
+        "id": "21",
+        "marca": "EL OLIVAR",
+        "nombre": "Aceite de oliva", 
+        "slug": "S/.22.90", 
+        "cantidad": " Presentación: 200 ml",
+        "precio": "20-30", 
+        "descuento": "",
+        "categoria": "aceites y grasas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/550595-1000-1000/3147.jpg" 
     }
+    ,
+    { 
+        "id": "22",
+        "marca": "JOHNNIE WALKER",
+        "nombre": "Whisky premium", 
+        "slug": "S/.49.90", 
+        "cantidad": " Presentación: 750 ml",
+        "precio": "40+", 
+        "descuento": "S/54.90",
+        "categoria": "bebidas", 
+        "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/28994025-1000-1000/160490.jpg" 
+    },
+        {
+            "id": "23",
+            "marca": "JOHNNIE WALKER",
+            "nombre": "Whisky JOHNNIE WALKER Double Black",
+            "slug": "S/.144.90",
+            "cantidad": "Presentación: 750 ml",
+            "precio": "40+", 
+            "descuento": "S/.184.90",
+            "categoria": "bebidas",
+            "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/313484-1000-1000/whisky-johnnie-walker-double-black-botella-750ml.jpg"
+        },
+        {
+            "id": "24",
+            "marca": "JÄGERMEISTER",
+            "nombre": "Licor de Hierbas JÄGERMEISTER",
+            "slug": "S/.79.90",
+            "cantidad": "Presentación: 700 ml",
+            "precio": "40+",
+            "descuento": "",
+            "categoria": "bebidas",
+            "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/529731-1000-1000/960294.jpg"
+        },
+        {
+            "id": "25",
+            "marca": "BOMBAY SAPPHIRE",
+            "nombre": "Gin BOMBAY Sapphire",
+            "slug": "S/.109.90",
+            "cantidad": "Presentación: 750 ml",
+            "precio": "40+",
+            "descuento": "",
+            "categoria": "bebidas",
+            "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/4220548-1000-1000/1998.jpg"
+        },
+        {
+            "id": "26",
+            "marca": "JACK DANIELS",
+            "nombre": "Whisky JACK DANIEL'S Tennessee Honey",
+            "slug": "S/.109.90",
+            "cantidad": "Presentación: 750 ml",
+            "precio": "40+",
+            "descuento": "S/.120.00",
+            "categoria": "bebidas",
+            "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/28565824-1000-1000/20086838.jpg"
+        },
+        {
+            "id": "27",
+            "marca": "JACK DANIELS",
+            "nombre": "Whisky JACK DANIEL'S Tennessee Apple",
+            "slug": "S/.100.00",
+            "cantidad": "Presentación: 750 ml",
+            "precio": "40+",
+            "descuento": "S/.119.90",
+            "categoria": "bebidas",
+            "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/28565876-1000-1000/20315720.jpg"
+        }
+    
+
 ]
